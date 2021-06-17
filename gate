@@ -1,0 +1,13 @@
+#!/usr/bin/env php
+<?php
+
+$autoloader = require file_exists(__DIR__.'/vendor/autoload.php') ?  __DIR__.'/vendor/autoload.php' : __DIR__.'/../../autoload.php';
+$dotenv = \Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
+if(empty(env('KONG_ADMIN_BASE')) || empty(env('KONG_ADMIN_URI')) || empty(env('KONG_API_KEY'))) {
+	throw new \Exceptions('Kong Gateway Admin URI, BASE or Kong API Key is missing.');
+	exit;
+}
+
+kong()->testConnection();
