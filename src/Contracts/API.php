@@ -13,4 +13,6 @@ interface API
     public function show($identifier);
 
     public function delete($identifier);
+
+    public function testConnection();
 }

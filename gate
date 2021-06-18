@@ -11,5 +11,5 @@ if(empty(env('KONG_ADMIN_BASE')) || empty(env('KONG_ADMIN_URI')) || empty(env('K
 }
 
 kong()->testConnection();
-$consumers = kong()->consumer()->index();
-echo 'Testing Consumers: ' . $consumers['status']['phrase'];
+kong()->consumer()->testConnection();
+kong()->service()->testConnection();

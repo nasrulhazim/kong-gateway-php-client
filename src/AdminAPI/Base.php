@@ -57,4 +57,48 @@ abstract class Base implements \KongGateway\Contracts\API
     {
         return $this->status_phrase;
     }
+
+    public function index()
+    {
+        return $this->response(
+            $this->client()->get($this->path())
+        );
+    }
+
+    public function store($data)
+    {
+        return $this->response(
+            $this->client()->post($this->path(), [
+                'form_params' => $data,
+            ])
+        );
+    }
+
+    public function update($identifier, $data)
+    {
+        return $this->response(
+            $this->client()->patch($this->path().'/'.$identifier, $data)
+        );
+    }
+
+    public function show($identifier)
+    {
+        return $this->response(
+            $this->client()->get($this->path().'/'.$identifier)
+        );
+    }
+
+    public function delete($identifier)
+    {
+        return $this->response(
+            $this->client()->delete($$this->path().'/'.$identifier)
+        );
+    }
+
+    public function testConnection()
+    {
+        echo 'Testing Connection to Kong Gateway Admin API: '.get_called_class().PHP_EOL;
+        $response = $this->client()->get($this->path());
+        echo 'Connection Status: '.$response->getReasonPhrase().PHP_EOL.PHP_EOL;
+    }
 }

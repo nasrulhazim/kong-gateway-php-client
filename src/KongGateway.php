@@ -40,13 +40,18 @@ class KongGateway
 
     public function testConnection()
     {
-        echo 'Testing Connection to Kong Gateway Admin API'.PHP_EOL;
+        echo 'Testing Connection to Kong Gateway Admin API'.PHP_EOL.PHP_EOL;
         $response = $this->client()->get('/admin-api');
-        echo 'Connection Status: '.$response->getReasonPhrase().PHP_EOL;
+        echo 'Connection Status: '.$response->getReasonPhrase().PHP_EOL.PHP_EOL;
     }
 
     public function consumer(): AdminAPI\Consumer
     {
         return (new AdminAPI\Consumer($this));
+    }
+
+    public function service(): AdminAPI\Service
+    {
+        return (new AdminAPI\Service($this));
     }
 }
