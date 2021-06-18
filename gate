@@ -16,3 +16,4 @@ kong()->service()->testConnection();
 kong()->route()->testConnection();
 kong()->plugin()->testConnection();
 kong()->tag()->testConnection();
+kong()->information()->testConnection();

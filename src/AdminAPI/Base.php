@@ -98,7 +98,7 @@ abstract class Base implements \KongGateway\Contracts\API
     public function testConnection()
     {
         echo 'Testing Connection to Kong Gateway Admin API: '.get_called_class().PHP_EOL;
-        $response = $this->client()->get($this->path());
-        echo 'Connection Status: '.$response->getReasonPhrase().PHP_EOL.PHP_EOL;
+        $this->index();
+        echo 'Connection Status: '.$this->statusPhrase().PHP_EOL.PHP_EOL;
     }
 }

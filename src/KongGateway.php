@@ -69,4 +69,9 @@ class KongGateway
     {
         return (new AdminAPI\Tag($this));
     }
+
+    public function information(): AdminAPI\InformationRoute
+    {
+        return (new AdminAPI\InformationRoute($this));
+    }
 }
