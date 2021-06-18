@@ -89,4 +89,19 @@ class KongGateway
     {
         return (new AdminAPI\Upstream($this));
     }
+
+    public function certificate(): AdminAPI\Certificate
+    {
+        return (new AdminAPI\Certificate($this));
+    }
+
+    public function caCertificate(): AdminAPI\CACertificate
+    {
+        return (new AdminAPI\CACertificate($this));
+    }
+
+    public function sni(): AdminAPI\SNI
+    {
+        return (new AdminAPI\SNI($this));
+    }
 }
