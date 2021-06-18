@@ -1,6 +1,6 @@
 ### Kong Gateway (OSS) PHP Client
 
-This package allowed communication with Kong Gateway Admin API.
+This package allowed communication with Kong Gateway Admin API. The supported version is starting from v2.4.1.
 
 ## Configuration
 
@@ -94,7 +94,7 @@ foreach($list['data'] as $datum) {
 
 ## Reference
 
-- [Kong Gateway Admin API](https://docs.konghq.com/gateway-oss/2.4.x/admin-api/#consumer-object)
+- [Kong Gateway Admin API](https://docs.konghq.com/gateway-oss/2.4.x/admin-api)
 
 ## Security Vulnerabilities
 
