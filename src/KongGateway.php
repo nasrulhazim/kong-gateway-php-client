@@ -79,4 +79,9 @@ class KongGateway
     {
         return (new AdminAPI\Status($this));
     }
+
+    public function target(): AdminAPI\Target
+    {
+        return (new AdminAPI\Target($this));
+    }
 }

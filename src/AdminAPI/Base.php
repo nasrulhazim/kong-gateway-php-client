@@ -91,7 +91,7 @@ abstract class Base implements \KongGateway\Contracts\API
     public function delete($identifier)
     {
         return $this->response(
-            $this->client()->delete($$this->path().'/'.$identifier)
+            $this->client()->delete($this->path().'/'.$identifier)
         );
     }
 
