@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d23347ce8f339f01ba3a97679d9c5e32",
+    "content-hash": "def418a2577c09f648430f605a90d213",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -405,12 +405,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/collections.git",
-                "reference": "d8f0f049237fe71a9c910236690902d38fbd5f19"
+                "reference": "4c26d37a832bd048624d2e474e8f0d27d68b10b8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/collections/zipball/d8f0f049237fe71a9c910236690902d38fbd5f19",
-                "reference": "d8f0f049237fe71a9c910236690902d38fbd5f19",
+                "url": "https://api.github.com/repos/illuminate/collections/zipball/4c26d37a832bd048624d2e474e8f0d27d68b10b8",
+                "reference": "4c26d37a832bd048624d2e474e8f0d27d68b10b8",
                 "shasum": ""
             },
             "require": {
@@ -452,7 +452,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2021-06-10T13:11:40+00:00"
+            "time": "2021-06-17T20:58:17+00:00"
         },
         {
             "name": "illuminate/contracts",
@@ -556,12 +556,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
-                "reference": "2e8ffd5e998b058753099e5e23543c55474aa81b"
+                "reference": "aa877c07d5f97bdd97d262b4d179b2ceae22768f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/support/zipball/2e8ffd5e998b058753099e5e23543c55474aa81b",
-                "reference": "2e8ffd5e998b058753099e5e23543c55474aa81b",
+                "url": "https://api.github.com/repos/illuminate/support/zipball/aa877c07d5f97bdd97d262b4d179b2ceae22768f",
+                "reference": "aa877c07d5f97bdd97d262b4d179b2ceae22768f",
                 "shasum": ""
             },
             "require": {
@@ -617,7 +617,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2021-06-11T12:07:42+00:00"
+            "time": "2021-06-17T20:58:17+00:00"
         },
         {
             "name": "nesbot/carbon",

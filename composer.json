@@ -1,5 +1,5 @@
 {
-    "name": "nasrulhazim/kong-php-client",
+    "name": "nasrulhazim/kong-gateway-php-client",
     "description": "Kong Gateway Admin API PHP Client",
     "type": "library",
     "license": "MIT",
