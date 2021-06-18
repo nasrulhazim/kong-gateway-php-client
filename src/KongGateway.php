@@ -17,6 +17,7 @@ class KongGateway
             'base_uri' => $this->config()->getBase(),
             'headers' => [
                 $this->config()->apiKeyName() => $this->config()->apiKey(),
+                'Accept' => 'application/json',
             ],
             'verify' => false,
         ]);
@@ -44,25 +45,8 @@ class KongGateway
         echo 'Connection Status: '.$response->getReasonPhrase().PHP_EOL;
     }
 
-    public function consumer(): API\Consumer
+    public function consumer(): AdminAPI\Consumer
     {
-        return (new API\Consumer($this));
-    }
-
-    public function createConsumer(string $username, array $tags = ['consumer'])
-    {
-        $response = $this->client()->post('/admin-api/consumers', [
-            'form_params' => [
-                'username' => $username,
-                'tags' => $tags,
-            ], 'headers' => [
-                'Accept' => 'application/json',
-            ],
-        ]);
-
-        return [
-            'status' => $response->getStatusCode(),
-            'data' => $response->getBody(),
-        ];
+        return (new AdminAPI\Consumer($this));
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace KongGateway\API;
+namespace KongGateway\AdminAPI;
 
 abstract class Base implements \KongGateway\Contracts\API
 {

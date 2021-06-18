@@ -1,6 +1,6 @@
 <?php
 
-namespace KongGateway\API;
+namespace KongGateway\AdminAPI;
 
 class Consumer extends Base implements \KongGateway\Contracts\API
 {
