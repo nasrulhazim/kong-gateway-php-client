@@ -40,7 +40,7 @@ class KongGateway
 
     public function testConnection()
     {
-        echo 'Testing Connection to Kong Gateway Admin API'.PHP_EOL.PHP_EOL;
+        echo 'Testing Connection to Kong Gateway Admin API'.PHP_EOL;
         $response = $this->client()->get('/admin-api');
         echo 'Connection Status: '.$response->getReasonPhrase().PHP_EOL.PHP_EOL;
     }
@@ -53,5 +53,10 @@ class KongGateway
     public function service(): AdminAPI\Service
     {
         return (new AdminAPI\Service($this));
+    }
+
+    public function route(): AdminAPI\Route
+    {
+        return (new AdminAPI\Route($this));
     }
 }
