@@ -1,6 +1,16 @@
-### Kong Gateway (OSS) PHP Client
+# Kong Gateway (OSS) PHP Client
 
 This package allowed communication with Kong Gateway Admin API. The supported version is starting from v2.4.1.
+
+## Installation
+
+Make sure to [configure](#configure) your Kong Gateway Admin API first. 
+
+To use this package, simply install with composer:
+
+```
+$ composer require nasrulhazim/kong-gateway-php-client
+```
 
 ## Configuration
 
