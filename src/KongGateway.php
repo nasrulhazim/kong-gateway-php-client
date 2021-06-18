@@ -59,4 +59,9 @@ class KongGateway
     {
         return (new AdminAPI\Route($this));
     }
+
+    public function plugin(): AdminAPI\Plugin
+    {
+        return (new AdminAPI\Plugin($this));
+    }
 }
