@@ -64,4 +64,9 @@ class KongGateway
     {
         return (new AdminAPI\Plugin($this));
     }
+
+    public function tag(): AdminAPI\Tag
+    {
+        return (new AdminAPI\Tag($this));
+    }
 }
