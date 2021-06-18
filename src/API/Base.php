@@ -2,7 +2,7 @@
 
 namespace KongGateway\API;
 
-class Base
+abstract class Base implements \KongGateway\Contracts\API
 {
     private $gateway;
 
@@ -26,11 +26,29 @@ class Base
         return $this->gateway->config();
     }
 
-    public function response($response)
+    public function response($response): array
     {
+        $this->status_code = trim($response->getStatusCode());
+        $this->status_phrase = trim($response->getReasonPhrase());
         return [
-            'status' => $response->getStatusCode(),
+            'status' => [
+                'code' => $this->statusCode(),
+                'phrase' => $this->statusPhrase(),
+            ],
             'data' => json_decode((string) $response->getBody()),
+            'meta' => [
+                'responded_at' => date('Y-m-d H:i:s'),
+            ],
         ];
+    }
+
+    public function statusCode(): string
+    {
+        return $this->status_code;
+    }
+
+    public function statusPhrase(): string
+    {
+        return $this->status_phrase;
     }
 }
