@@ -43,6 +43,11 @@ abstract class Base implements \KongGateway\Contracts\API
         ];
     }
 
+    public function path(): string
+    {
+        return $this->prefix().'/'.$this->path;
+    }
+
     public function statusCode(): string
     {
         return $this->status_code;

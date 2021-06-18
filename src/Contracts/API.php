@@ -4,6 +4,8 @@ namespace KongGateway\Contracts;
 
 interface API
 {
+    public function path(): string;
+
     public function index();
 
     public function store($data);
