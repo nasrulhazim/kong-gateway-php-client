@@ -1,10 +1,10 @@
-<?php 
+<?php
 
 namespace KongGateway\Concerns;
 
 trait ReadOnly
 {
-	public function store($data)
+    public function store($data)
     {
         throw new \Exceptions('API endpoint did not exist');
     }
