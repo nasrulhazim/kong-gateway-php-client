@@ -20,3 +20,4 @@ kong()->information()->testConnection();
 kong()->status()->testConnection();
 // @todo need to find a way to test the target object. as for now, kiv. 
 // kong()->target()->testConnection();
+kong()->upstream()->testConnection();

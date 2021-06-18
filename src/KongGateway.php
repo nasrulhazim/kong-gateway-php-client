@@ -84,4 +84,9 @@ class KongGateway
     {
         return (new AdminAPI\Target($this));
     }
+
+    public function upstream(): AdminAPI\Upstream
+    {
+        return (new AdminAPI\Upstream($this));
+    }
 }
