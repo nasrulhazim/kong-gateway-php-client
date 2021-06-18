@@ -74,4 +74,9 @@ class KongGateway
     {
         return (new AdminAPI\InformationRoute($this));
     }
+
+    public function status(): AdminAPI\Status
+    {
+        return (new AdminAPI\Status($this));
+    }
 }
