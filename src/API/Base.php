@@ -30,6 +30,7 @@ abstract class Base implements \KongGateway\Contracts\API
     {
         $this->status_code = trim($response->getStatusCode());
         $this->status_phrase = trim($response->getReasonPhrase());
+
         return [
             'status' => [
                 'code' => $this->statusCode(),
