@@ -11,7 +11,7 @@
     ],
     "require": {
         "php": "^8.0",
-        "guzzlehttp/guzzle": "7.4.x-dev",
+        "guzzlehttp/guzzle": "^7.3",
         "illuminate/support": "9.x-dev",
         "vlucas/phpdotenv": "5.3.x-dev"
     },

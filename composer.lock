@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "def418a2577c09f648430f605a90d213",
+    "content-hash": "d98a8aa4ba974026a741fdf6c591b99a",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -2036,12 +2036,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "e2799f29dc454fb8e5ce755a62c88b310bfaa554"
+                "reference": "84b35f781daaa4092bcb17e0b3a76733af0d1c67"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/e2799f29dc454fb8e5ce755a62c88b310bfaa554",
-                "reference": "e2799f29dc454fb8e5ce755a62c88b310bfaa554",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/84b35f781daaa4092bcb17e0b3a76733af0d1c67",
+                "reference": "84b35f781daaa4092bcb17e0b3a76733af0d1c67",
                 "shasum": ""
             },
             "require": {
@@ -2106,7 +2106,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-06-05T04:18:15+00:00"
+            "time": "2021-06-18T06:29:42+00:00"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -2359,12 +2359,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "187407c87fbe7ee1455a1ef10e46e23fbd80860f"
+                "reference": "91cbbc8df4602dcbabfd66ba1b063c9301cdc4bb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/187407c87fbe7ee1455a1ef10e46e23fbd80860f",
-                "reference": "187407c87fbe7ee1455a1ef10e46e23fbd80860f",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/91cbbc8df4602dcbabfd66ba1b063c9301cdc4bb",
+                "reference": "91cbbc8df4602dcbabfd66ba1b063c9301cdc4bb",
                 "shasum": ""
             },
             "require": {
@@ -2451,7 +2451,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-06-15T13:21:58+00:00"
+            "time": "2021-06-18T09:12:07+00:00"
         },
         {
             "name": "sebastian/cli-parser",
@@ -3273,12 +3273,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/type.git",
-                "reference": "2d7a6e8d823a3aa2a6bdd70e37faf6185ae356fb"
+                "reference": "ff75bf25dc1e70cf05fc5a2c7a5548b6ef638f40"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/type/zipball/2d7a6e8d823a3aa2a6bdd70e37faf6185ae356fb",
-                "reference": "2d7a6e8d823a3aa2a6bdd70e37faf6185ae356fb",
+                "url": "https://api.github.com/repos/sebastianbergmann/type/zipball/ff75bf25dc1e70cf05fc5a2c7a5548b6ef638f40",
+                "reference": "ff75bf25dc1e70cf05fc5a2c7a5548b6ef638f40",
                 "shasum": ""
             },
             "require": {
@@ -3322,7 +3322,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-06-15T12:54:17+00:00"
+            "time": "2021-06-18T06:28:48+00:00"
         },
         {
             "name": "sebastian/version",
@@ -3432,7 +3432,6 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "guzzlehttp/guzzle": 20,
         "illuminate/support": 20,
         "vlucas/phpdotenv": 20,
         "phpunit/phpunit": 20
