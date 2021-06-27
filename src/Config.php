@@ -6,7 +6,12 @@ class Config
 {
     public function __construct($driver = null)
     {
-        $this->driver = new Driver($driver = null);
+        $this->driver = new Driver($driver);
+    }
+
+    public function driver(): Driver
+    {
+        return $this->driver;
     }
 
     public function getUrl(): string

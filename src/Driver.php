@@ -18,11 +18,17 @@ class Driver
             throw new \Exception('Unable to find '.$name.' driver');
         }
 
+        $this->name = $name;
         $this->connection = $this->config['connections'][$name];
         $this->base = rtrim($this->connection['base'], '/');
         $this->uri = ltrim($this->connection['uri'], '/');
         $this->apiKey = $this->connection['apiKey'];
         $this->keyName = $this->connection['keyName'];
+    }
+
+    public function name(): string
+    {
+        return $this->name;
     }
 
     public function base(): string
