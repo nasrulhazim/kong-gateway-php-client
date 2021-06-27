@@ -1,6 +1,6 @@
 <?php
 
-namespace CleaniqueCoders\Profile\Console\Commands;
+namespace KongGateway\Console\Commands;
 
 use Illuminate\Console\Command;
 
