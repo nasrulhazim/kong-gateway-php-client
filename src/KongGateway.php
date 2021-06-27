@@ -16,7 +16,7 @@ class KongGateway
         $this->client = new Client([
             'base_uri' => $this->config()->getBase(),
             'headers' => [
-                $this->config()->apiKeyName() => $this->config()->apiKey(),
+                $this->config()->keyName() => $this->config()->apiKey(),
                 'Accept' => 'application/json',
             ],
             'verify' => false,

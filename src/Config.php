@@ -4,17 +4,9 @@ namespace KongGateway;
 
 class Config
 {
-    private $api_key;
-    private $api_key_name;
-    private $base;
-    private $uri;
-
-    public function __construct(string $base, string $uri, string $api_key, string $api_key_name = 'api-key')
+    public function __construct($driver = null)
     {
-        $this->base = rtrim($base, '/');
-        $this->uri = ltrim($uri, '/');
-        $this->api_key = $api_key;
-        $this->api_key_name = $api_key_name;
+        $this->driver = new Driver($driver = null);
     }
 
     public function getUrl(): string
@@ -24,21 +16,21 @@ class Config
 
     public function getUri(): string
     {
-        return '/'.$this->uri;
+        return '/'.$this->driver->uri();
     }
 
     public function getBase(): string
     {
-        return $this->base;
+        return $this->driver->base();
     }
 
     public function apiKey(): string
     {
-        return $this->api_key;
+        return $this->driver->apiKey();
     }
 
-    public function apiKeyName(): string
+    public function keyName(): string
     {
-        return $this->api_key_name;
+        return $this->driver->keyName();
     }
 }
