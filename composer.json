@@ -31,6 +31,13 @@
         "preferred-install": "dist",
         "sort-packages": true
     },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "KongGateway\\KongGatewayServiceProvider"
+            ]
+        }
+    },
     "minimum-stability": "dev",
     "bin": ["gate"]
 }
