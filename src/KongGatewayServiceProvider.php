@@ -27,6 +27,7 @@ class KongGatewayServiceProvider extends ServiceProvider
         if ($this->app->runningInConsole()) {
             $this->commands([
                 \KongGateway\Console\Commands\PublishCommand::class,
+                \KongGateway\Console\Commands\TestConnectionCommand::class,
             ]);
         }
     }

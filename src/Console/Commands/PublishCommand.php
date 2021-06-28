@@ -35,8 +35,6 @@ class PublishCommand extends Command
      */
     public function handle()
     {
-        $this->call('vendor:publish', [
-            '--tag' => 'kong-config'
-        ]);
+        $messages = kong()->testConnection();
     }
 }

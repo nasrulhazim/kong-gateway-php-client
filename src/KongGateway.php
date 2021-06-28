@@ -43,11 +43,20 @@ class KongGateway
         return $this->config()->driver()->name();
     }
 
-    public function testConnection()
+    public function testConnection($verbose = false)
     {
-        echo 'Testing Connection to Kong Gateway Admin API using '.$this->getConnectionName().' connection'.PHP_EOL;
+        $messages = [];
+        $messages[] = 'Testing '.get_called_class().' to Kong Gateway Admin API using '.$this->getConnectionName().' connection';
         $response = $this->client()->get('/admin-api');
-        echo $this->getConnectionName().' Connection Status: '.$response->getReasonPhrase().PHP_EOL.PHP_EOL;
+        $messages[] = $this->getConnectionName().' Connection Status: '.$response->getReasonPhrase();
+        if(! $verbose) {
+            return $messages;
+        } else {
+            foreach($messages as $message) {
+                echo $message . PHP_EOL;
+            }
+            echo PHP_EOL;
+        }
     }
 
     public function consumer(): AdminAPI\Consumer
