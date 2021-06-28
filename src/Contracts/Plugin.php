@@ -4,5 +4,4 @@ namespace KongGateway\Contracts;
 
 interface Plugin
 {
-
 }
