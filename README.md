@@ -10,11 +10,7 @@ Install this package with composer:
 $ composer require nasrulhazim/kong-gateway-php-client
 ```
 
-Make sure to [prepare your Kong Gateway Admin API](https://github.com/nasrulhazim/kong-gateway-php-client/wiki/Preparing-Kong-Gateway) first.
-
-## Usage
-
-Details usage can be found in the [Kong Gateway PHP Client Wiki](https://github.com/nasrulhazim/kong-gateway-php-client/wiki)
+Details installation and usage can be found in the [Kong Gateway PHP Client Wiki](https://github.com/nasrulhazim/kong-gateway-php-client/wiki)
 
 ## Reference
 
