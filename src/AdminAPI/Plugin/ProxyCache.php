@@ -2,9 +2,14 @@
 
 namespace KongGateway\AdminAPI\Plugin;
 
-class ClassName extends \KongGateway\AdminAPI\Plugin
+class ProxyCache extends \KongGateway\AdminAPI\Plugin
 {
     public $path = 'proxy-cache';
+
+    public function callTestConnection()
+    {
+        $this->purge();
+    }
 
     public function showByPlugin($plugin, $identifier)
     {

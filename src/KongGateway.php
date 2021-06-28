@@ -8,6 +8,7 @@ class KongGateway
 {
     private $config;
     private $client;
+    const DEFAULT_PLUGIN = \KongGateway\AdminAPI\Plugin::class;
 
     public function __construct(Config $config)
     {
@@ -74,9 +75,12 @@ class KongGateway
         return (new AdminAPI\Route($this));
     }
 
-    public function plugin(): AdminAPI\Plugin
+    public function plugin($alias = null): AdminAPI\Plugin
     {
-        return (new AdminAPI\Plugin($this));
+        $class = is_null($alias) 
+            ? self::DEFAULT_PLUGIN 
+            : kong_plugin($alias);
+        return (new $class($this));
     }
 
     public function tag(): AdminAPI\Tag

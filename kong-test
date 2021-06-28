@@ -11,17 +11,18 @@ if(empty(env('KONG_ADMIN_BASE')) || empty(env('KONG_ADMIN_URI')) || empty(env('K
 	exit;
 }
 
-kong()->testConnection();
-kong()->consumer()->testConnection();
-kong()->service()->testConnection();
-kong()->route()->testConnection();
-kong()->plugin()->testConnection();
-kong()->tag()->testConnection();
-kong()->information()->testConnection();
-kong()->status()->testConnection();
+kong()->testConnection(true);
+kong()->consumer()->testConnection(true);
+kong()->service()->testConnection(true);
+kong()->route()->testConnection(true);
+kong()->plugin()->testConnection(true);
+kong()->tag()->testConnection(true);
+kong()->information()->testConnection(true);
+kong()->status()->testConnection(true);
 // @todo need to find a way to test the target object. as for now, kiv. 
-// kong()->target()->testConnection();
-kong()->upstream()->testConnection();
-kong()->certificate()->testConnection();
-kong()->caCertificate()->testConnection();
-kong()->sni()->testConnection();
+// kong()->target()->testConnection(true);
+kong()->upstream()->testConnection(true);
+kong()->certificate()->testConnection(true);
+kong()->caCertificate()->testConnection(true);
+kong()->sni()->testConnection(true);
+kong()->plugin('proxy-cache')->testConnection(true);

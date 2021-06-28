@@ -35,6 +35,12 @@ class TestConnectionCommand extends Command
      */
     public function handle()
     {
+        $this->testConnections();
+        $this->testPluginConnections();
+    }
+
+    private function testConnections()
+    {
         $this->info(kong()->testConnection()[1]);
         collect([
             'consumer',
@@ -50,6 +56,17 @@ class TestConnectionCommand extends Command
             'sni',
         ])->each(function ($api) {
             $messages = kong()->{$api}()->testConnection();
+            $this->info($messages[0]);
+        });
+    }
+
+    private function testPluginConnections()
+    {
+        $this->info(kong()->testConnection()[1]);
+        collect([
+            'proxy-cache',
+        ])->each(function ($plugin) {
+            $messages = kong()->plugin($plugin)->testConnection();
             $this->info($messages[0]);
         });
     }

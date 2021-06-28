@@ -8,3 +8,29 @@ if (! function_exists('kong')) {
         );
     }
 }
+
+if (! function_exists('kong_config')) {
+    function kong_config()
+    {
+        return function_exists('config')
+            ? config('kong')
+            : require env('KONG_CONFIG', __DIR__.'/../config/kong.php');
+    }
+}
+
+if (! function_exists('kong_plugin')) {
+    function kong_plugin($alias)
+    {
+        $config = kong_config();
+
+        if(! isset($config['plugins'][$alias])) {
+            throw new \Exception($alias . ' plugin did not exists.');
+        }
+        
+        if(! class_exists($config['plugins'][$alias])) {
+            throw new \Exception($alias . ' plugin class did not exists.');
+        }
+
+        return $config['plugins'][$alias];
+    }
+}

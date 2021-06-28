@@ -39,5 +39,5 @@
         }
     },
     "minimum-stability": "dev",
-    "bin": ["gate"]
+    "bin": ["kong-test"]
 }

@@ -9,5 +9,8 @@ return [
 			'apiKey' => env('KONG_API_KEY'),
 			'keyName' => env('KONG_API_KEY_NAME')
 		],
+	],
+	'plugins' => [
+		'proxy-cache' => \KongGateway\AdminAPI\Plugin\ProxyCache::class,
 	]
 ];

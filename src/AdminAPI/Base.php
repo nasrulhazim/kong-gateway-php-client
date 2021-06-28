@@ -100,11 +100,16 @@ abstract class Base implements \KongGateway\Contracts\API
         return $this->config()->driver()->name();
     }
 
+    public function callTestConnection()
+    {
+        $this->index();
+    }
+
     public function testConnection($verbose = false)
     {
         $messages = [];
         $messages[] = 'Testing '.get_called_class().' to Kong Gateway Admin API using '.$this->getConnectionName().' connection';
-        $this->index();
+        $this->callTestConnection();
         $messages[] = $this->getConnectionName().' Connection Status: '.$this->statusPhrase();
 
         if (! $verbose) {
