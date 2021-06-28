@@ -10,16 +10,36 @@ Install this package with composer:
 $ composer require nasrulhazim/kong-gateway-php-client
 ```
 
-Details installation and usage can be found in the [Kong Gateway PHP Client Wiki](https://github.com/nasrulhazim/kong-gateway-php-client/wiki)
+## Usage
+
+Usage can be found in the [Kong Gateway PHP Client Wiki](https://github.com/nasrulhazim/kong-gateway-php-client/wiki)
+
+### Testing
+
+```bash
+composer test
+```
+
+### Changelog
+
+Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
 
 ## Reference
 
 - [Kong Gateway Admin API](https://docs.konghq.com/gateway-oss/2.4.x/admin-api)
 
-## Security Vulnerabilities
+## Contributing
+
+Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
+
+### Security 
 
 If you discover a security vulnerability within Laravel, please send an e-mail to Nasrul Hazim via [nasrulhazim.m@gmail.com](mailto:nasrulhazim.m@gmail.com). All security vulnerabilities will be promptly addressed.
 
+## Credits
+
+-   [Nasrul Hazim Bin Mohamad](https://github.com/nasrulhazim)
+
 ## License
 
-The Kong Gateway (OSS) PHP Client is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+The Kong Gateway (OSS) PHP Client is open-sourced software licensed under the [License File](LICENSE.md).
