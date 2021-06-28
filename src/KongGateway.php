@@ -77,9 +77,10 @@ class KongGateway
 
     public function plugin($alias = null): AdminAPI\Plugin
     {
-        $class = is_null($alias) 
-            ? self::DEFAULT_PLUGIN 
+        $class = is_null($alias)
+            ? self::DEFAULT_PLUGIN
             : kong_plugin($alias);
+
         return (new $class($this));
     }
 

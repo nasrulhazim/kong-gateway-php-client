@@ -23,12 +23,12 @@ if (! function_exists('kong_plugin')) {
     {
         $config = kong_config();
 
-        if(! isset($config['plugins'][$alias])) {
-            throw new \Exception($alias . ' plugin did not exists.');
+        if (! isset($config['plugins'][$alias])) {
+            throw new \Exception($alias.' plugin did not exists.');
         }
-        
-        if(! class_exists($config['plugins'][$alias])) {
-            throw new \Exception($alias . ' plugin class did not exists.');
+
+        if (! class_exists($config['plugins'][$alias])) {
+            throw new \Exception($alias.' plugin class did not exists.');
         }
 
         return $config['plugins'][$alias];
