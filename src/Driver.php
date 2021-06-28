@@ -8,8 +8,8 @@ class Driver
 
     public function __construct(string $name = null)
     {
-        $this->config = function_exists('config') 
-            ? config('kong') 
+        $this->config = function_exists('config')
+            ? config('kong')
             : require env('KONG_CONFIG', __DIR__.'/../config/kong.php');
 
         if (empty($name)) {

@@ -107,11 +107,11 @@ abstract class Base implements \KongGateway\Contracts\API
         $this->index();
         $messages[] = $this->getConnectionName().' Connection Status: '.$this->statusPhrase();
 
-        if(! $verbose) {
+        if (! $verbose) {
             return $messages;
         } else {
-            foreach($messages as $message) {
-                echo $message . PHP_EOL;
+            foreach ($messages as $message) {
+                echo $message.PHP_EOL;
             }
             echo PHP_EOL;
         }

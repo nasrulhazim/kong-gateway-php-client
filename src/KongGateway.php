@@ -49,11 +49,11 @@ class KongGateway
         $messages[] = 'Testing '.get_called_class().' to Kong Gateway Admin API using '.$this->getConnectionName().' connection';
         $response = $this->client()->get('/admin-api');
         $messages[] = $this->getConnectionName().' Connection Status: '.$response->getReasonPhrase();
-        if(! $verbose) {
+        if (! $verbose) {
             return $messages;
         } else {
-            foreach($messages as $message) {
-                echo $message . PHP_EOL;
+            foreach ($messages as $message) {
+                echo $message.PHP_EOL;
             }
             echo PHP_EOL;
         }

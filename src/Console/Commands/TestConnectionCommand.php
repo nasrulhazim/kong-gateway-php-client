@@ -48,7 +48,7 @@ class TestConnectionCommand extends Command
             'certificate',
             'caCertificate',
             'sni',
-        ])->each(function($api){
+        ])->each(function ($api) {
             $messages = kong()->{$api}()->testConnection();
             $this->info($messages[0]);
         });
