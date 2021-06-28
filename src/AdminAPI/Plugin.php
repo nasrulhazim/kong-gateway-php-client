@@ -2,7 +2,7 @@
 
 namespace KongGateway\AdminAPI;
 
-class Plugin extends Base implements \KongGateway\Contracts\API
+class Plugin extends Base implements \KongGateway\Contracts\API, \KongGateway\Contracts\Plugin
 {
     public $path = 'plugins';
 

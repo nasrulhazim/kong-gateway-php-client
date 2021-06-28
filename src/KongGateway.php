@@ -75,7 +75,7 @@ class KongGateway
         return (new AdminAPI\Route($this));
     }
 
-    public function plugin($alias = null): AdminAPI\Plugin
+    public function plugin($alias = null): \KongGateway\Contracts\Plugin
     {
         $class = is_null($alias)
             ? self::DEFAULT_PLUGIN

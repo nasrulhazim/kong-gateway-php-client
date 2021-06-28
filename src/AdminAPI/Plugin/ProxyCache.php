@@ -2,7 +2,9 @@
 
 namespace KongGateway\AdminAPI\Plugin;
 
-class ProxyCache extends \KongGateway\AdminAPI\Plugin
+use KongGateway\Contracts\Plugin as Contract;
+
+class ProxyCache extends \KongGateway\AdminAPI\Plugin implements Contract
 {
     public $path = 'proxy-cache';
 
