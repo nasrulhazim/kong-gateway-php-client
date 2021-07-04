@@ -9,9 +9,9 @@ class JWT extends Plugin
     public $path = 'jwts';
 
     /**
-     * Create a JWT credential
-     * 
-     * @link https://docs.konghq.com/hub/kong-inc/jwt/#create-a-jwt-credential
+     * Create a JWT credential.
+     *
+     * @see https://docs.konghq.com/hub/kong-inc/jwt/#create-a-jwt-credential
      */
     public function createCredential($consumer)
     {
@@ -21,9 +21,9 @@ class JWT extends Plugin
     }
 
     /**
-     * Retrieve the Consumer associated with a JWT
-     * 
-     * @link https://docs.konghq.com/hub/kong-inc/jwt/#retrieve-the-consumer-associated-with-a-jwt
+     * Retrieve the Consumer associated with a JWT.
+     *
+     * @see https://docs.konghq.com/hub/kong-inc/jwt/#retrieve-the-consumer-associated-with-a-jwt
      */
     public function show($identifier)
     {
@@ -33,9 +33,9 @@ class JWT extends Plugin
     }
 
     /**
-     * List JWT credentials
-     * 
-     * @link https://docs.konghq.com/hub/kong-inc/jwt/#list-jwt-credentials
+     * List JWT credentials.
+     *
+     * @see https://docs.konghq.com/hub/kong-inc/jwt/#list-jwt-credentials
      */
     public function showConsumerCredentials($consumer)
     {
@@ -45,9 +45,9 @@ class JWT extends Plugin
     }
 
     /**
-     * Delete a JWT Credential
-     * 
-     * @link https://docs.konghq.com/hub/kong-inc/jwt/#delete-a-jwt-credential
+     * Delete a JWT Credential.
+     *
+     * @see https://docs.konghq.com/hub/kong-inc/jwt/#delete-a-jwt-credential
      */
     public function deleteCredential($consumer, $id)
     {
