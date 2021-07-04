@@ -9,8 +9,9 @@ class Basic extends Plugin
     public $path = 'basic-auths';
 
     /**
-     * Create a credential
-     * @link https://docs.konghq.com/hub/kong-inc/basic-auth/#create-a-credential
+     * Create a credential.
+     *
+     * @see https://docs.konghq.com/hub/kong-inc/basic-auth/#create-a-credential
      */
     public function createCredential($consumer, $username, $password)
     {
@@ -23,8 +24,9 @@ class Basic extends Plugin
     }
 
     /**
-     * Retrieve the Consumer associated with a Credential
-     * @link https://docs.konghq.com/hub/kong-inc/basic-auth/#retrieve-the-consumer-associated-with-a-credential
+     * Retrieve the Consumer associated with a Credential.
+     *
+     * @see https://docs.konghq.com/hub/kong-inc/basic-auth/#retrieve-the-consumer-associated-with-a-credential
      */
     public function show($identifier)
     {
