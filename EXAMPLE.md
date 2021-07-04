@@ -112,3 +112,33 @@ Expected Output:
      ],
 ]
 ```
+
+## Set Basic Auth for the Consumer
+
+```php
+kong()->plugin('auth-basic')->createCredential('1b79a837-5494-45c0-a4a0-ce0405380427', 'kongi', 'KongPassword1234^|')
+```
+
+Expected Output:
+
+```bash
+[
+     "status" => [
+       "code" => "201",
+       "phrase" => "Created",
+     ],
+     "data" => {#3413
+       +"username": "kongi",
+       +"id": "8ce6aebb-b0bc-4317-b18f-1f1ca1c7c3e4",
+       +"consumer": {#3411
+         +"id": "1b79a837-5494-45c0-a4a0-ce0405380427",
+       },
+       +"password": "5f7ba9520feecf4a25b7d04daa8ceb3b5db89ceb",
+       +"created_at": 1625370747,
+       +"tags": null,
+     },
+     "meta" => [
+       "responded_at" => "2021-07-04 03:52:28",
+     ],
+]
+```

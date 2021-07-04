@@ -6,4 +6,15 @@ use KongGateway\Contracts\Plugin as Contract;
 
 class Basic extends \KongGateway\AdminAPI\Plugin implements Contract
 {
+    public $name = 'basic-auth';
+
+    public function createCredential($consumer, $username, $password)
+    {
+        return $this->response(
+            $this->client()->post(
+                $this->consumerPath($consumer).'/basic-auth', [
+                    'form_params' => ['username' => $username, 'password' => 'password'],
+                ])
+        );
+    }
 }
