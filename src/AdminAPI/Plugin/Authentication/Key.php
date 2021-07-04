@@ -9,8 +9,9 @@ class Key extends Plugin
     public $path = 'key-auths';
 
     /**
-     * Create a Key
-     * @link https://docs.konghq.com/hub/kong-inc/key-auth/#create-a-key
+     * Create a Key.
+     *
+     * @see https://docs.konghq.com/hub/kong-inc/key-auth/#create-a-key
      */
     public function createKey($consumer)
     {
@@ -20,8 +21,9 @@ class Key extends Plugin
     }
 
     /**
-     * Delete A Key
-     * @link https://docs.konghq.com/hub/kong-inc/key-auth/#delete-a-key
+     * Delete A Key.
+     *
+     * @see https://docs.konghq.com/hub/kong-inc/key-auth/#delete-a-key
      */
     public function deleteKey($consumer, $identifier)
     {
@@ -31,8 +33,9 @@ class Key extends Plugin
     }
 
     /**
-     * Retrieve the Consumer associated with a key
-     * @link https://docs.konghq.com/hub/kong-inc/key-auth/#retrieve-the-consumer-associated-with-a-key
+     * Retrieve the Consumer associated with a key.
+     *
+     * @see https://docs.konghq.com/hub/kong-inc/key-auth/#retrieve-the-consumer-associated-with-a-key
      */
     public function show($identifier)
     {
