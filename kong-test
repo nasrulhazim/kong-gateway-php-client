@@ -28,7 +28,7 @@ kong()->sni()->testConnection(true);
 
 ## Plugin: Authentication
 kong()->plugin('auth-basic')->testConnection(true);
-// kong()->plugin('auth-hmac')->testConnection(true);
+kong()->plugin('auth-hmac')->testConnection(true);
 kong()->plugin('auth-jwt')->testConnection(true);
 kong()->plugin('auth-key')->testConnection(true);
 kong()->plugin('auth-ldap')->testConnection(true);
