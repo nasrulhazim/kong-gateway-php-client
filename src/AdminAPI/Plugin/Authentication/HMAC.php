@@ -2,8 +2,8 @@
 
 namespace KongGateway\AdminAPI\Plugin\Authentication;
 
-use KongGateway\Contracts\Plugin as Contract;
+use KongGateway\AdminAPI\Plugin;
 
-class HMAC extends \KongGateway\AdminAPI\Plugin implements Contract
+class HMAC extends Plugin
 {
 }

@@ -2,9 +2,9 @@
 
 namespace KongGateway\AdminAPI\Plugin\Authentication;
 
-use KongGateway\Contracts\Plugin as Contract;
+use KongGateway\AdminAPI\Plugin;
 
-class Key extends \KongGateway\AdminAPI\Plugin implements Contract
+class Key extends Plugin
 {
     public $name = 'key-auth';
 

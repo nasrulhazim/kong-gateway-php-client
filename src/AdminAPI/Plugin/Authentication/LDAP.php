@@ -2,8 +2,8 @@
 
 namespace KongGateway\AdminAPI\Plugin\Authentication;
 
-use KongGateway\Contracts\Plugin as Contract;
+use KongGateway\AdminAPI\Plugin;
 
-class LDAP extends \KongGateway\AdminAPI\Plugin implements Contract
+class LDAP extends Plugin
 {
 }
