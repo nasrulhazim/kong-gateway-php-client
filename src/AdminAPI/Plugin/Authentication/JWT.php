@@ -6,7 +6,7 @@ use KongGateway\AdminAPI\Plugin;
 
 class JWT extends Plugin
 {
-    public $name = 'jwt';
+    public $path = 'jwts';
 
     public function createCredential($consumer)
     {

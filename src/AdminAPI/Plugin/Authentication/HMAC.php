@@ -6,4 +6,5 @@ use KongGateway\AdminAPI\Plugin;
 
 class HMAC extends Plugin
 {
+	public $path = 'hmac-auth';
 }

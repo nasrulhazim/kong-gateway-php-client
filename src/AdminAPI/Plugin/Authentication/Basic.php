@@ -6,7 +6,7 @@ use KongGateway\AdminAPI\Plugin;
 
 class Basic extends Plugin
 {
-    public $name = 'basic-auth';
+    public $path = 'basic-auths';
 
     public function createCredential($consumer, $username, $password)
     {
@@ -18,17 +18,10 @@ class Basic extends Plugin
         );
     }
 
-    public function index()
-    {
-        return $this->response(
-            $this->client()->get($this->prefix().'/basic-auths')
-        );
-    }
-
     public function show($identifier)
     {
         return $this->response(
-            $this->client()->get($this->prefix().'/basic-auths/'.$identifier.'/consumer')
+            $this->client()->get($this->pluginPath().'/'.$identifier.'/consumer')
         );
     }
 }

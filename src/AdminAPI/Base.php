@@ -58,17 +58,42 @@ abstract class Base implements \KongGateway\Contracts\API
         return $this->status_phrase;
     }
 
+    public function indexPath()
+    {
+        return $this->path();
+    }
+
+    public function storePath()
+    {
+        return $this->path();
+    }
+
+    public function showPath()
+    {
+        return $this->path();
+    }
+
+    public function updatePath()
+    {
+        return $this->path();
+    }
+
+    public function deletePath()
+    {
+        return $this->path();
+    }
+
     public function index()
     {
         return $this->response(
-            $this->client()->get($this->path())
+            $this->client()->get($this->indexPath())
         );
     }
 
     public function store($data)
     {
         return $this->response(
-            $this->client()->post($this->path(), [
+            $this->client()->post($this->storePath(), [
                 'form_params' => $data,
             ])
         );
@@ -77,7 +102,7 @@ abstract class Base implements \KongGateway\Contracts\API
     public function update($identifier, $data)
     {
         return $this->response(
-            $this->client()->patch($this->path().'/'.$identifier, [
+            $this->client()->patch($this->updatePath().'/'.$identifier, [
                 'form_params' => $data,
             ])
         );
@@ -86,14 +111,14 @@ abstract class Base implements \KongGateway\Contracts\API
     public function show($identifier)
     {
         return $this->response(
-            $this->client()->get($this->path().'/'.$identifier)
+            $this->client()->get($this->showPath().'/'.$identifier)
         );
     }
 
     public function delete($identifier)
     {
         return $this->response(
-            $this->client()->delete($this->path().'/'.$identifier)
+            $this->client()->delete($this->deletePath().'/'.$identifier)
         );
     }
 

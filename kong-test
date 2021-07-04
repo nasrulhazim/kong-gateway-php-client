@@ -28,7 +28,7 @@ kong()->sni()->testConnection(true);
 
 ## Plugin: Authentication
 kong()->plugin('auth-basic')->testConnection(true);
-kong()->plugin('auth-hmac')->testConnection(true);
+// kong()->plugin('auth-hmac')->testConnection(true);
 kong()->plugin('auth-jwt')->testConnection(true);
 kong()->plugin('auth-key')->testConnection(true);
 kong()->plugin('auth-ldap')->testConnection(true);
@@ -41,7 +41,7 @@ kong()->plugin('log-sys')->testConnection(true);
 kong()->plugin('log-tcp')->testConnection(true);
 kong()->plugin('log-udp')->testConnection(true);
 
-## Plugin: Security
+// ## Plugin: Security
 kong()->plugin('security-acme')->testConnection(true);
 kong()->plugin('security-botdetection')->testConnection(true);
 kong()->plugin('security-cors')->testConnection(true);

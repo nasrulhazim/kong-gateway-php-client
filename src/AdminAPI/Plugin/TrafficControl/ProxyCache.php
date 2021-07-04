@@ -6,7 +6,7 @@ use KongGateway\AdminAPI\Plugin;
 
 class ProxyCache extends Plugin
 {
-    public $plugin_path = 'proxy-cache';
+    public $name = 'proxy-cache';
 
     public function callTestConnection()
     {
