@@ -7,7 +7,7 @@ use KongGateway\AdminAPI\Plugin;
 class Key extends Plugin
 {
     public $path = 'key-auths';
-  
+
     public function createKey($consumer)
     {
         return $this->response(
