@@ -12,11 +12,11 @@ if (! function_exists('kong')) {
 if (! function_exists('kong_config')) {
     function kong_config()
     {
-        if(env('KONG_CONFIG')) {
+        if (env('KONG_CONFIG')) {
             return require env('KONG_CONFIG');
         }
 
-        if(function_exists('config')) {
+        if (function_exists('config')) {
             return config('kong');
         }
 
