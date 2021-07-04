@@ -12,9 +12,15 @@ if (! function_exists('kong')) {
 if (! function_exists('kong_config')) {
     function kong_config()
     {
-        return function_exists('config')
-            ? config('kong')
-            : require env('KONG_CONFIG', __DIR__.'/../config/kong.php');
+        if(env('KONG_CONFIG')) {
+            return require env('KONG_CONFIG');
+        }
+
+        if(function_exists('config')) {
+            return config('kong');
+        }
+
+        return require __DIR__.'/../config/kong.php';
     }
 }
 
