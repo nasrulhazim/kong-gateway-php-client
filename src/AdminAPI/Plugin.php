@@ -102,4 +102,42 @@ class Plugin extends Base implements PluginContract
     {
         return $this->store($data);
     }
+
+    public function disableForService($service)
+    {
+        return $this->response(
+            $this->client()
+                ->post(
+                    $this->enableServicePath($service),
+                    $this->data(['enabled' => false])
+                )
+        );
+    }
+
+    public function disableForRoute($route)
+    {
+        return $this->response(
+            $this->client()
+                ->post(
+                    $this->enableRoutePath($route),
+                    $this->data(['enabled' => false])
+                )
+        );
+    }
+
+    public function disableForConsumer($consumer)
+    {
+        return $this->response(
+            $this->client()
+                ->post(
+                    $this->enableConsumerPath($consumer),
+                    $this->data(['enabled' => false])
+                )
+        );
+    }
+
+    public function disableForGlobal($data)
+    {
+        return $this->store(['enabled' => false]);
+    }
 }
