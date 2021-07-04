@@ -7,55 +7,93 @@ use KongGateway\Contracts\Plugin as PluginContract;
 class Plugin extends Base implements PluginContract
 {
     public $path = 'plugins';
-    public $plugin_path = '';
 
-    public function pluginPath(): string
+    public $name = 'plugins';
+
+    public function name()
     {
-        return $this->prefix().'/'.trim($this->plugin_path, '/');
+        return $this->name;
+    }
+
+    public function path(): string
+    {
+        return $this->path;
     }
 
     public function servicePath($service): string
     {
-        return $this->prefix().'/services/'.$service.'/'.trim($this->path, '/');
+        return $this->prefix().'/services/'.$service;
     }
 
     public function routePath($route): string
     {
-        return $this->prefix().'/routes/'.$route.'/'.trim($this->path, '/');
+        return $this->prefix().'/routes/'.$route;
     }
 
     public function consumerPath($consumer): string
     {
-        return $this->prefix().'/consumers/'.$consumer.'/'.trim($this->path, '/');
+        return $this->prefix().'/consumers/'.$consumer;
+    }
+
+    public function enableServicePath($service): string
+    {
+        return $this->servicePath($service).'/plugins';
+    }
+
+    public function enableRoutePath($route): string
+    {
+        return $this->routePath($route).'/plugins';
+    }
+
+    public function enableConsumerPath($consumer): string
+    {
+        return $this->consumerPath($consumer).'/plugins';
+    }
+
+    public function data($data)
+    {
+        $parameters = array_merge([
+            'name' => $this->name(),
+        ], $data);
+
+        return [
+            'form_params' => $parameters,
+        ];
     }
 
     // Enabling the plugin on a service
-    public function enableForService($service, $name, $data)
+    public function enableForService($service, $data)
     {
         return $this->response(
-            $this->client()->post($this->servicePath($name), [
-                'form_params' => $data,
-            ])
+            $this->client()
+                ->post(
+                    $this->enableServicePath($service),
+                    $this->data($data)
+                )
         );
     }
 
     // Enabling the plugin on a route
-    public function enableForRoute($route, $name, $data)
+    public function enableForRoute($route, $data)
     {
         return $this->response(
-            $this->client()->post($this->routePath($name), [
-                'form_params' => $data,
-            ])
+            $this->client()
+                ->post(
+                    $this->enableRoutePath($route),
+                    $this->data($data)
+                )
         );
     }
 
     // Enabling the plugin on a consumer
-    public function enableForConsumer($consumer, $name, $data)
+    public function enableForConsumer($consumer, $data)
     {
         return $this->response(
-            $this->client()->post($this->consumerPath($name), [
-                'form_params' => $data,
-            ])
+            $this->client()
+                ->post(
+                    $this->enableConsumerPath($consumer),
+                    $this->data($data)
+                )
         );
     }
 

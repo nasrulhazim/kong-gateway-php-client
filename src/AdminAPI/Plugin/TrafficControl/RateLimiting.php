@@ -6,4 +6,5 @@ use KongGateway\AdminAPI\Plugin;
 
 class RateLimiting extends Plugin
 {
+    public $name = 'rate-limiting';
 }

@@ -77,7 +77,9 @@ abstract class Base implements \KongGateway\Contracts\API
     public function update($identifier, $data)
     {
         return $this->response(
-            $this->client()->patch($this->path().'/'.$identifier, $data)
+            $this->client()->patch($this->path().'/'.$identifier, [
+                'form_params' => $data,
+            ])
         );
     }
 
