@@ -17,4 +17,18 @@ class Basic extends \KongGateway\AdminAPI\Plugin implements Contract
                 ])
         );
     }
+
+    public function index()
+    {
+    	return $this->response(
+            $this->client()->get($this->prefix().'/basic-auths')
+        );
+    }
+
+    public function show($identifier)
+    {
+    	return $this->response(
+            $this->client()->get($this->prefix().'/basic-auths/'.$identifier.'/consumer')
+        );
+    }
 }

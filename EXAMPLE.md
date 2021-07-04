@@ -142,3 +142,68 @@ Expected Output:
      ],
 ]
 ```
+
+Using the credentials - refer [here](https://docs.konghq.com/hub/kong-inc/basic-auth/#using-the-credential)
+
+## Get List of Consumers using Basic Auth
+
+```php
+kong()->plugin('basic-auth')->index()
+```
+
+```bash
+kong()->plugin('auth-basic')->index()
+=> [
+     "status" => [
+       "code" => "200",
+       "phrase" => "OK",
+     ],
+     "data" => {#3394
+       +"data": [
+         {#3411
+           +"username": "kongi",
+           +"id": "8ce6aebb-b0bc-4317-b18f-1f1ca1c7c3e4",
+           +"consumer": {#3409
+             +"id": "1b79a837-5494-45c0-a4a0-ce0405380427",
+           },
+           +"password": "5f7ba9520feecf4a25b7d04daa8ceb3b5db89ceb",
+           +"created_at": 1625370747,
+           +"tags": null,
+         },
+       ],
+       +"next": null,
+     },
+     "meta" => [
+       "responded_at" => "2021-07-04 03:59:14",
+     ],
+   ]
+```
+
+## Get Basic Auth Details using Consumer 
+
+[Reference](https://docs.konghq.com/hub/kong-inc/basic-auth/#retrieve-the-consumer-associated-with-a-credential)
+
+```php
+kong()->plugin('auth-basic')->show('kongi');
+```
+
+Expected Output:
+
+```bash
+    [
+     "status" => [
+       "code" => "200",
+       "phrase" => "OK",
+     ],
+     "data" => {#3417
+       +"created_at": 1625367190,
+       +"id": "1b79a837-5494-45c0-a4a0-ce0405380427",
+       +"custom_id": null,
+       +"username": "kg-php-client",
+       +"tags": null,
+     },
+     "meta" => [
+       "responded_at" => "2021-07-04 04:00:09",
+     ],
+   ]
+```
