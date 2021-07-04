@@ -2,23 +2,31 @@
 
 namespace KongGateway\AdminAPI;
 
-class Plugin extends Base implements \KongGateway\Contracts\API, \KongGateway\Contracts\Plugin
+use KongGateway\Contracts\Plugin as PluginContract;
+
+class Plugin extends Base implements PluginContract
 {
     public $path = 'plugins';
+    public $plugin_path = '';
+
+    public function pluginPath(): string
+    {
+        return $this->prefix().'/'.trim($this->plugin_path, '/');
+    }
 
     public function servicePath($service): string
     {
-        return $this->prefix().'/services/'.$service.'/'.$this->path;
+        return $this->prefix().'/services/'.$service.'/'.trim($this->path, '/');
     }
 
     public function routePath($route): string
     {
-        return $this->prefix().'/routes/'.$route.'/'.$this->path;
+        return $this->prefix().'/routes/'.$route.'/'.trim($this->path, '/');
     }
 
     public function consumerPath($consumer): string
     {
-        return $this->prefix().'/consumers/'.$consumer.'/'.$this->path;
+        return $this->prefix().'/consumers/'.$consumer.'/'.trim($this->path, '/');
     }
 
     // Enabling the plugin on a service

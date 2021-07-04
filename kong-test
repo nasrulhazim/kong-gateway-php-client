@@ -25,4 +25,39 @@ kong()->upstream()->testConnection(true);
 kong()->certificate()->testConnection(true);
 kong()->caCertificate()->testConnection(true);
 kong()->sni()->testConnection(true);
-kong()->plugin('proxy-cache')->testConnection(true);
+
+## Plugin: Authentication
+kong()->plugin('auth-basic')->testConnection(true);
+kong()->plugin('auth-hmac')->testConnection(true);
+kong()->plugin('auth-jwt')->testConnection(true);
+kong()->plugin('auth-key')->testConnection(true);
+kong()->plugin('auth-ldap')->testConnection(true);
+kong()->plugin('auth-oauth')->testConnection(true);
+
+## Plugin: Loggin
+kong()->plugin('log-file')->testConnection(true);
+kong()->plugin('log-http')->testConnection(true);
+kong()->plugin('log-sys')->testConnection(true);
+kong()->plugin('log-tcp')->testConnection(true);
+kong()->plugin('log-udp')->testConnection(true);
+
+## Plugin: Security
+kong()->plugin('security-acme')->testConnection(true);
+kong()->plugin('security-botdetection')->testConnection(true);
+kong()->plugin('security-cors')->testConnection(true);
+kong()->plugin('security-iprestriction')->testConnection(true);
+
+## Plugin: Traffic Control
+kong()->plugin('traffic-proxy-cache')->testConnection(true);
+kong()->plugin('traffic-acl')->testConnection(true);
+kong()->plugin('traffic-rate-limiting')->testConnection(true);
+kong()->plugin('traffic-request-size-limiting')->testConnection(true);
+kong()->plugin('traffic-request-termination')->testConnection(true);
+kong()->plugin('traffic-response-rate-limiting')->testConnection(true);
+kong()->plugin('traffic-kong-response-size-limiting')->testConnection(true);
+kong()->plugin('traffic-kong-service-virtualization')->testConnection(true);
+
+## Plugin: Transformation
+kong()->plugin('transform-correlation-id')->testConnection(true);
+kong()->plugin('transform-request-transformer')->testConnection(true);
+kong()->plugin('transform-response-transformer')->testConnection(true);
