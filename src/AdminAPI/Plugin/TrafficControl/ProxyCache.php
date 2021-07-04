@@ -14,8 +14,9 @@ class ProxyCache extends Plugin
     }
 
     /**
-     * Retrieve a Cache Entity
-     * @link https://docs.konghq.com/hub/kong-inc/proxy-cache/#retrieve-a-cache-entity
+     * Retrieve a Cache Entity.
+     *
+     * @see https://docs.konghq.com/hub/kong-inc/proxy-cache/#retrieve-a-cache-entity
      */
     public function showByPlugin($plugin, $identifier)
     {
@@ -32,26 +33,28 @@ class ProxyCache extends Plugin
     }
 
     /**
-     * Delete Cache Entity
-     * @link https://docs.konghq.com/hub/kong-inc/proxy-cache/#delete-cache-entity
+     * Delete Cache Entity.
+     *
+     * @see https://docs.konghq.com/hub/kong-inc/proxy-cache/#delete-cache-entity
      */
     public function deletePluginCache($plugin, $identifier)
     {
         return $this->response(
-            $this->client()->delete($this->pluginPath() .'/'. $plugin.'/caches/'.$identifier);
+            $this->client()->delete($this->pluginPath().'/'.$plugin.'/caches/'.$identifier)
         );
     }
 
     public function deleteCache($identifier)
     {
         return $this->response(
-            $this->client()->delete($this->pluginPath() .'/'. $identifier)
+            $this->client()->delete($this->pluginPath().'/'.$identifier)
         );
     }
 
     /**
-     * Purge All Cache Entities
-     * @link https://docs.konghq.com/hub/kong-inc/proxy-cache/#purge-all-cache-entities
+     * Purge All Cache Entities.
+     *
+     * @see https://docs.konghq.com/hub/kong-inc/proxy-cache/#purge-all-cache-entities
      */
     public function purge()
     {
