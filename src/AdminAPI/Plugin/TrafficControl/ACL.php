@@ -40,7 +40,7 @@ class ACL extends Plugin
      *
      * @see https://docs.konghq.com/hub/kong-inc/acl/#retrieve-consumer-by-id
      */
-    public function show($consumer, $identifier)
+    public function showConsumerById($consumer, $identifier)
     {
         return $this->response(
             $this->client()->get($this->consumerPath($consumer).'/acls/'.$identifier)
