@@ -6,4 +6,5 @@ use KongGateway\AdminAPI\Plugin;
 
 class UDPLog extends Plugin
 {
+	public $name = 'udp-log';
 }

@@ -6,4 +6,5 @@ use KongGateway\AdminAPI\Plugin;
 
 class HTTPLog extends Plugin
 {
+	public $name = 'http-log';
 }
