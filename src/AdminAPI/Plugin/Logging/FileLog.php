@@ -6,5 +6,5 @@ use KongGateway\AdminAPI\Plugin;
 
 class FileLog extends Plugin
 {
-	public $name = 'file-log';
+    public $name = 'file-log';
 }

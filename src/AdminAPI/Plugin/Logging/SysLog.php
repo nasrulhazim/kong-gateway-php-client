@@ -6,5 +6,5 @@ use KongGateway\AdminAPI\Plugin;
 
 class SysLog extends Plugin
 {
-	public $name = 'syslog';
+    public $name = 'syslog';
 }
