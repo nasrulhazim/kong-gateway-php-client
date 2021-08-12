@@ -43,4 +43,14 @@ class Key extends Plugin
             $this->client()->get($this->showPath().'/'.$identifier.'/consumer')
         );
     }
+
+    /**
+     * Filter the list by Consumer by using a different endpoint.
+     */
+    public function showConsumerKeys($consumer)
+    {
+        return $this->response(
+            $this->client()->get($this->consumerPath($consumer).'/key-auth')
+        );
+    }
 }
