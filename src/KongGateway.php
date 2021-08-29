@@ -16,11 +16,8 @@ class KongGateway
 
         $this->client = new Client([
             'base_uri' => $this->config()->getBase(),
-            'headers' => [
-                $this->config()->keyName() => $this->config()->apiKey(),
-                'Accept' => 'application/json',
-            ],
-            'verify' => false,
+            'headers' => $this->headers(),
+            'verify' => $this->verify(),
         ]);
     }
 
@@ -42,6 +39,16 @@ class KongGateway
     public function getConnectionName()
     {
         return $this->config()->driver()->name();
+    }
+
+    public function headers()
+    {
+        return $this->config()->headers();
+    }
+
+    public function verify()
+    {
+        return $this->config()->verify();
     }
 
     public function testConnection($verbose = false)

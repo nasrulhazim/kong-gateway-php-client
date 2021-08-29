@@ -38,4 +38,17 @@ class Config
     {
         return $this->driver->keyName();
     }
+
+    public function headers()
+    {
+        return array_merge(
+            [ $this->keyName() => $this->apiKey() ], 
+            $this->driver->headers()
+        );
+    }
+
+    public function verify()
+    {
+        return $this->driver->verify();
+    }
 }

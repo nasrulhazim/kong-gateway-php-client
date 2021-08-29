@@ -7,7 +7,12 @@ return [
 			'base' => env('KONG_ADMIN_BASE'),
 			'uri' => env('KONG_ADMIN_URI'),
 			'apiKey' => env('KONG_API_KEY'),
-			'keyName' => env('KONG_API_KEY_NAME')
+			'keyName' => env('KONG_API_KEY_NAME'),
+			'headers' => [
+				'Content-Type' => 'application/x-www-form-urlencoded',
+            	'Accept' => 'application/json',
+			],
+			'verify' => env('KONG_API_VERIFY', false),
 		],
 	],
 	/**

@@ -24,6 +24,8 @@ class Driver
         $this->uri = ltrim($this->connection['uri'], '/');
         $this->apiKey = $this->connection['apiKey'];
         $this->keyName = $this->connection['keyName'];
+        $this->headers = $this->connection['headers'];
+        $this->verify = $this->connection['verify'];
     }
 
     public function name(): string
@@ -49,5 +51,15 @@ class Driver
     public function keyName(): string
     {
         return $this->keyName;
+    }
+
+    public function headers()
+    {
+        return $this->headers;
+    }
+
+    public function verify()
+    {
+        return $this->verify;
     }
 }
