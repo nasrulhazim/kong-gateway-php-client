@@ -42,7 +42,7 @@ class Config
     public function headers()
     {
         return array_merge(
-            [ $this->keyName() => $this->apiKey() ], 
+            [$this->keyName() => $this->apiKey()],
             $this->driver->headers()
         );
     }
