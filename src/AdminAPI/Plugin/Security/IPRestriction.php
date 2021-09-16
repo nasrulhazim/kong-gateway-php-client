@@ -6,4 +6,5 @@ use KongGateway\AdminAPI\Plugin;
 
 class IPRestriction extends Plugin
 {
+	public $name = 'ip-restriction';
 }
