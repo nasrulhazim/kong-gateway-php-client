@@ -8,7 +8,7 @@ class KongGateway
 {
     private $config;
     private $client;
-    const DEFAULT_PLUGIN = \KongGateway\AdminAPI\Plugin::class;
+    public const DEFAULT_PLUGIN = \KongGateway\AdminAPI\Plugin::class;
 
     public function __construct(Config $config)
     {

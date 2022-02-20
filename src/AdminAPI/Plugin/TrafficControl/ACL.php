@@ -17,9 +17,11 @@ class ACL extends Plugin
     {
         return $this->response(
             $this->client()->post(
-                $this->consumerPath($identifier).'/acls', [
+                $this->consumerPath($identifier).'/acls',
+                [
                     'form_params' => $data,
-                ])
+                ]
+            )
         );
     }
 
@@ -68,9 +70,11 @@ class ACL extends Plugin
     {
         return $this->response(
             $this->client()->put(
-                $this->consumerPath($consumer).'/acls'.$identifier, [
+                $this->consumerPath($consumer).'/acls'.$identifier,
+                [
                     'form_params' => $data,
-                ])
+                ]
+            )
         );
     }
 
@@ -83,9 +87,11 @@ class ACL extends Plugin
     {
         return $this->response(
             $this->client()->post(
-                $this->consumerPath($consumer).'/acls', [
+                $this->consumerPath($consumer).'/acls',
+                [
                     'form_params' => $data,
-                ])
+                ]
+            )
         );
     }
 

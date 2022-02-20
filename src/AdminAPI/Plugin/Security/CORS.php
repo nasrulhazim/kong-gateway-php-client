@@ -6,5 +6,5 @@ use KongGateway\AdminAPI\Plugin;
 
 class CORS extends Plugin
 {
-	public $name = 'cors';
+    public $name = 'cors';
 }
