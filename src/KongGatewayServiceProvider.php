@@ -18,7 +18,8 @@ class KongGatewayServiceProvider extends ServiceProvider
             __DIR__.'/../config/kong.php' => config_path('kong.php'),
         ], 'kong-config');
         $this->mergeConfigFrom(
-            __DIR__.'/../config/kong.php', 'kong-config'
+            __DIR__.'/../config/kong.php',
+            'kong-config'
         );
 
         /*

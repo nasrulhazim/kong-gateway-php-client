@@ -6,5 +6,5 @@ use KongGateway\AdminAPI\Plugin;
 
 class ACME extends Plugin
 {
-	public $name = 'acme';
+    public $name = 'acme';
 }

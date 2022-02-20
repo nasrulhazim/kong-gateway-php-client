@@ -17,9 +17,11 @@ class Basic extends Plugin
     {
         return $this->response(
             $this->client()->post(
-                $this->consumerPath($consumer).'/basic-auth', [
+                $this->consumerPath($consumer).'/basic-auth',
+                [
                     'form_params' => ['username' => $username, 'password' => 'password'],
-                ])
+                ]
+            )
         );
     }
 
