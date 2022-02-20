@@ -1,3 +1,5 @@
+[![run-tests](https://github.com/nasrulhazim/kong-gateway-php-client/actions/workflows/run-tests.yml/badge.svg)](https://github.com/nasrulhazim/kong-gateway-php-client/actions/workflows/run-tests.yml) [![Check & fix styling](https://github.com/nasrulhazim/kong-gateway-php-client/actions/workflows/php-cs-fixer.yml/badge.svg)](https://github.com/nasrulhazim/kong-gateway-php-client/actions/workflows/php-cs-fixer.yml)
+
 # Kong Gateway (OSS) PHP Client
 
 This package allowed communication with Kong Gateway Admin API. The supported version is starting from v2.4.1.
