@@ -4,8 +4,8 @@ namespace KongGateway\AdminAPI;
 
 class Status extends Base
 {
-    use \KongGateway\Concerns\ReadOnly;
-    use \KongGateway\Concerns\SingleOnly;
+    use \KongGateway\Concerns\ReadOnlyOperation;
+    use \KongGateway\Concerns\SingleOnlyOperation;
 
     public $path = 'status';
 }

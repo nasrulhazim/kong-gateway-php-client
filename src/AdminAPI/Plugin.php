@@ -7,6 +7,7 @@ use KongGateway\Contracts\Plugin as PluginContract;
 class Plugin extends Base implements PluginContract
 {
     public $path = 'plugins';
+
     public $name = 'plugins'; // name used in sending data to plugin API.
 
     public function name(): string

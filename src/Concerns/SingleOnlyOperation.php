@@ -2,7 +2,7 @@
 
 namespace KongGateway\Concerns;
 
-trait SingleOnly
+trait SingleOnlyOperation
 {
     public function show($identifier)
     {

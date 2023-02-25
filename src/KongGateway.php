@@ -7,7 +7,9 @@ use GuzzleHttp\Client;
 class KongGateway
 {
     private $config;
+
     private $client;
+
     public const DEFAULT_PLUGIN = \KongGateway\AdminAPI\Plugin::class;
 
     public function __construct(Config $config)
@@ -69,17 +71,17 @@ class KongGateway
 
     public function consumer(): AdminAPI\Consumer
     {
-        return (new AdminAPI\Consumer($this));
+        return new AdminAPI\Consumer($this);
     }
 
     public function service(): AdminAPI\Service
     {
-        return (new AdminAPI\Service($this));
+        return new AdminAPI\Service($this);
     }
 
     public function route(): AdminAPI\Route
     {
-        return (new AdminAPI\Route($this));
+        return new AdminAPI\Route($this);
     }
 
     public function plugin($alias = null): Contracts\Plugin
@@ -88,46 +90,46 @@ class KongGateway
             ? self::DEFAULT_PLUGIN
             : kong_plugin($alias);
 
-        return (new $class($this));
+        return new $class($this);
     }
 
     public function tag(): AdminAPI\Tag
     {
-        return (new AdminAPI\Tag($this));
+        return new AdminAPI\Tag($this);
     }
 
     public function information(): AdminAPI\InformationRoute
     {
-        return (new AdminAPI\InformationRoute($this));
+        return new AdminAPI\InformationRoute($this);
     }
 
     public function status(): AdminAPI\Status
     {
-        return (new AdminAPI\Status($this));
+        return new AdminAPI\Status($this);
     }
 
     public function target(): AdminAPI\Target
     {
-        return (new AdminAPI\Target($this));
+        return new AdminAPI\Target($this);
     }
 
     public function upstream(): AdminAPI\Upstream
     {
-        return (new AdminAPI\Upstream($this));
+        return new AdminAPI\Upstream($this);
     }
 
     public function certificate(): AdminAPI\Certificate
     {
-        return (new AdminAPI\Certificate($this));
+        return new AdminAPI\Certificate($this);
     }
 
     public function caCertificate(): AdminAPI\CACertificate
     {
-        return (new AdminAPI\CACertificate($this));
+        return new AdminAPI\CACertificate($this);
     }
 
     public function sni(): AdminAPI\SNI
     {
-        return (new AdminAPI\SNI($this));
+        return new AdminAPI\SNI($this);
     }
 }

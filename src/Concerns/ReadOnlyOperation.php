@@ -2,7 +2,7 @@
 
 namespace KongGateway\Concerns;
 
-trait ReadOnly
+trait ReadOnlyOperation
 {
     public function store($data)
     {
